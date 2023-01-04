@@ -1,0 +1,1 @@
+g++ sqlite.cpp -o sqlite.html SQLite3.dll
