@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Radha AI</title>
+    
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CodeMirror CSS for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/monokai.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="AI.css">
+</head>
+<body>
+   
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+
+            <h4 class="mt-4">Code Edit View:</h4>
+            <textarea id="output"></textarea>
+            <br>
+
+            <h4 class="mb-3">User Input:</h4>
+            <textarea id="input" class="form-control" rows="6" placeholder="Type Here ....."></textarea>
+           <br>
+            <div class="d-flex gap-2">
+                <button id="submit" class="btn btn-primary w-100">Get Response</button>
+                <button id="preview" class="btn btn-secondary w-100">Preview</button>
+                <button id="speakAI" class="btn btn-success w-100" onclick="speak();">Speak With AI</button>
+            </div>
+
+            
+        </div>
+        <div class="col-md-5">
+           
+            <div class="container mt-5">
+                <div class="menu">
+                    <h4>RadhaAI</h4>
+                    <div id="aiText" class="ai-animation"></div>
+                    
+                    <a href="javascript:void(0)" onclick="location.reload();">Reload</a>
+                    <label for="colorPicker">Color</label>
+                    <input type="color" id="colorPicker" onchange="copyColor(this.value)">
+                    <select id="fontPicker"></select>
+                </div>
+            </div>
+            <br>
+            <h4 class="mb-3">Live Preview:</h4>
+            <div class="preview-box">
+                <iframe id="previewFrame" class="w-100" style="height: 450px; border: none;"></iframe>
+            </div>
+        </div>
+
+       
+    </div>
+</div>
+
+<!-- CodeMirror JS for syntax highlighting -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/htmlmixed/htmlmixed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/closetag.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/matchbrackets.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="AI.js">
+    </script>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
