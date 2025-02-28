@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🎉 Happy Birthday Shivi 🎂</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lobster Two', cursive;
+            background: linear-gradient(-45deg, #ff416c, #ff4b2b, #1e90ff, #32cd32);
+            background-size: 400% 400%;
+            animation: gradientBG 8s ease infinite;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            font-size: 80px;
+            text-transform: uppercase;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 10px #fff, 0 0 20px #ff4b2b, 0 0 30px #ff416c, 0 0 40px #1e90ff;
+            animation: neonGlow 1.5s infinite alternate;
+        }
+
+        @keyframes neonGlow {
+            from { text-shadow: 0 0 10px #fff, 0 0 20px #ff4b2b, 0 0 30px #ff416c, 0 0 40px #1e90ff; }
+            to { text-shadow: 0 0 20px #fff, 0 0 30px #ff416c, 0 0 40px #1e90ff, 0 0 50px #32cd32; }
+        }
+
+        .button {
+            background: #ff4b2b;
+            color: white;
+            font-size: 20px;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(255, 75, 43, 0.8);
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #1e90ff;
+            box-shadow: 0 0 15px rgba(30, 144, 255, 0.8);
+        }
+
+        #youtubePlayer {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🎉 Happy Birthday Shivi! 🎂</h1>
+    <button class="button" onclick="playSong();this.style.display='none'">Click for Surprise 🎊</button>
+
+    <!-- YouTube Embedded Player -->
+    <iframe id="youtubePlayer" width="560" height="315" 
+        src="" 
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+
+    <script>
+        function playSong() {
+            document.getElementById('youtubePlayer').src = "https://www.youtube.com/embed/5u4xTa3LR2U?autoplay=1";
+            document.getElementById('youtubePlayer').style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
